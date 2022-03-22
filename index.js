@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import connectdb from "./Middlewares/dbConnection.js";
-import vendorAccount from "./Routes/vendorAccount.js";
+import vendorAccount from "./Routes/Account/vendorAccount.js";
 // import imageRouter from './Route/pictureRoute.js';
 import cookieParser from "cookie-parser";
 import errorMiddleware from "./Middlewares/error.js";

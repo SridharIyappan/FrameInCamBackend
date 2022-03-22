@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+
 const vendorSchema = new mongoose.Schema(
   {
     type: {

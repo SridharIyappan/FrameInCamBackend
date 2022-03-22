@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 import ErrorHandler from "../Utils/errorHandler.js";
-import Users from "../Models/vendorAccount.js";
+import Users from "../Models/Account/vendorAccount.js";
 
 const authentication = async (req, res, next) => {
     try {
