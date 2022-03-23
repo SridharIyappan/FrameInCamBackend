@@ -2,10 +2,11 @@ import VendorProfile from "../../Models/Profile/vendorProfileModel";
 import ErrorHandler from "../../Utils/errorHandler";
 
 // Create Vendor Profile Start
-const createVendorProfile = async (req, res, next) => {
+export const createVendorProfile = async (req, res, next) => {
   const {
     name,
     img,
+    type,
     email,
     mobile,
     about,
@@ -25,7 +26,10 @@ const createVendorProfile = async (req, res, next) => {
     addressLine2,
   } = req.body;
 
+  const id = req.params.id;
+
   try {
+    
   } catch (error) {
       return next(new ErrorHandler(error, 500));
   }

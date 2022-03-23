@@ -11,7 +11,6 @@ const vendorSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: true,
     },
     email: {
       type: String,
@@ -20,7 +19,6 @@ const vendorSchema = new mongoose.Schema(
     },
     mobile: {
       type: Number,
-      required: true,
     },
     resetPasswordToken: String,
     resetPasswordExpire: Date,

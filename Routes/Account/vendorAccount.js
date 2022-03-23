@@ -17,11 +17,11 @@ router.post(
   [
     check("name", "Name is Required").notEmpty(),
     check("email", "Email is Required").isEmail(),
-    check("mobile", "Phone number must be 10 Numbers").isLength({ min: 10 }),
-    check(
-      "password",
-      "Please enter a password more than 8 characters "
-    ).isLength({ min: 8 }),
+    // check("mobile", "Phone number must be 10 Numbers").isLength({ min: 10 }),
+    // check(
+    //   "password",
+    //   "Please enter a password more than 8 characters "
+    // ).isLength({ min: 8 }),
   ],
   vendorRegistration
 );
