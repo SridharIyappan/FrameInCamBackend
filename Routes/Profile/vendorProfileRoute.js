@@ -16,8 +16,8 @@ router.post(
     check("city", "City is Required").notEmpty(),
     check("state", "State is Required").notEmpty(),
   ],
-  // authentication,
-  // authorization("photographer"),
+  authentication,
+  authorization("photographer"),
   createVendorProfile
 );
 

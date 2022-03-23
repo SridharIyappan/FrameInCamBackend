@@ -6,15 +6,15 @@ const vendorProfileSchema = new mongoose.Schema(
       type: String,
     },
     vendorId: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     name: {
       type: String,
       required: true,
     },
     img: {
-        type: String
+      type: String,
     },
     email: {
       type: String,
@@ -26,54 +26,54 @@ const vendorProfileSchema = new mongoose.Schema(
       required: true,
     },
     about: {
-        type: String
+      type: String,
     },
     studioName: {
-        type: String
+      type: String,
     },
     paymentTerms: {
-        type: String
+      type: String,
     },
     additionalCost: {
-        type: String
+      type: String,
     },
     experience: {
-        type: String
+      type: String,
     },
     siteUrl: {
-        type: String
+      type: String,
     },
     fbUrl: {
-        type: String
+      type: String,
     },
     instaUrl: {
-        type: String
+      type: String,
     },
     youtubeUrl: {
-        type: String
+      type: String,
     },
-        pincode: {
-            type: Number,
-            required: true,
-        },
-        city: {
-            type: String,
-            required: true 
-        },
-        state: {
-            type: String,
-            required: true
-        },
-        landmark: {
-            type: String
-        },
-        addressLine1: {
-            type: String
-        },
-        addressLine2: {
-            type: String
-        }
+    pincode: {
+      type: Number,
+      required: true,
     },
+    city: {
+      type: String,
+      required: true,
+    },
+    state: {
+      type: String,
+      required: true,
+    },
+    landmark: {
+      type: String,
+    },
+    addressLine1: {
+      type: String,
+    },
+    addressLine2: {
+      type: String,
+    },
+  },
   {
     timestamps: true,
   }

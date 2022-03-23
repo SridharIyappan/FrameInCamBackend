@@ -5,7 +5,7 @@ import Users from "../Models/Account/vendorAccount.js";
 
 const authentication = async (req, res, next) => {
     try {
-        const { token } = req.cookies;
+        const token  = req.headers.authentication;
         if (!token) {
           return next(
             new ErrorHandler("Please login for access this resource")
