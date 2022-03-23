@@ -5,6 +5,10 @@ const vendorProfileSchema = new mongoose.Schema(
     type: {
       type: String,
     },
+    vendorId: {
+        type: String,
+        required: true
+    },
     name: {
       type: String,
       required: true,
@@ -48,7 +52,6 @@ const vendorProfileSchema = new mongoose.Schema(
     youtubeUrl: {
         type: String
     },
-    address: {
         pincode: {
             type: Number,
             required: true,
@@ -70,8 +73,7 @@ const vendorProfileSchema = new mongoose.Schema(
         addressLine2: {
             type: String
         }
-    }
-  },
+    },
   {
     timestamps: true,
   }

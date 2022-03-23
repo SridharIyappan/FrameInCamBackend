@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import connectdb from "./Middlewares/dbConnection.js";
 import vendorAccount from "./Routes/Account/vendorAccount.js";
+import vendorProfile from "./Routes/Profile/vendorProfileRoute.js";
 // import imageRouter from './Route/pictureRoute.js';
 import cookieParser from "cookie-parser";
 import errorMiddleware from "./Middlewares/error.js";
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ extended: true }));
 
 app.use("/api", vendorAccount);
+app.use("/api", vendorProfile);
 // app.use("/api", imageRouter);
 
 app.use(errorMiddleware);

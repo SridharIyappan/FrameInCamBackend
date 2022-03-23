@@ -137,7 +137,7 @@ export const vendorFacebookRegistration = async (req, res, next) => {
         console.log(email, name);
         const findEmail = User.findOne({ email });
         if (findEmail) {
-          return res.json("Account Already Exist");
+          return res.json({success: false, msg:"Account Already Exist"});
         }
         const type = "photographer";
         let user = new User({ name, email, type });

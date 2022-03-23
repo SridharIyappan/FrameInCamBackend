@@ -1,9 +1,10 @@
-import VendorProfile from "../../Models/Profile/vendorProfileModel";
-import ErrorHandler from "../../Utils/errorHandler";
+import VendorProfile from "../../Models/Profile/vendorProfileModel.js";
+import ErrorHandler from "../../Utils/errorHandler.js";
 
 // Create Vendor Profile Start
 export const createVendorProfile = async (req, res, next) => {
   const {
+    vendorId,
     name,
     img,
     type,
@@ -29,7 +30,8 @@ export const createVendorProfile = async (req, res, next) => {
   const id = req.params.id;
 
   try {
-    
+    const vendorProfile = await new VendorProfile(req.body);
+    await vendorProfile.save();
   } catch (error) {
       return next(new ErrorHandler(error, 500));
   }
