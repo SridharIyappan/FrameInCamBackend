@@ -28,5 +28,5 @@ app.use("/api", vendorProfile);
 app.use(errorMiddleware);
 
 app.listen(port, () => {
-  console.log(`http://localhost:${port}, on ${process.env.NODE_ENV} mode`);
+  console.log(`http://localhost:${port}, on ${process.env.NODE_ENV}`);
 });
